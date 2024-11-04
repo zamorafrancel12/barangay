@@ -1,0 +1,348 @@
+/* styles.css */
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.homepage-section {
+    font-family: Arial, sans-serif; /* Use a clean sans-serif font */
+    background-image: url('bg2.png'); /* Path to your background image */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the background image */
+    padding: 40px; /* Adds padding inside the section */
+    color: white; /* Sets the text color to white for better contrast */
+    text-align: center; /* Centers the text inside the section */
+}
+
+/* Optional: To set a min-height for better visibility of content */
+.homepage-section {
+    min-height: 400px; /* Adjust as necessary for your design */
+}
+
+
+
+
+/* Header Styling */
+header {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between logo and nav */
+    align-items: center; /* Center items vertically */
+    background-color: #d8353c; /* Dark background for the header */
+    padding: 10px 20px; /* Padding around header */
+}
+
+.logo {
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Center items vertically */
+}
+
+.logo img {
+    height: 50px; /* Set logo height */
+    margin-right: 10px; /* Space between logo and text */
+}
+
+.logo-text {
+    font-size: 1.5em; /* Adjust font size as needed */
+    color: whitesmoke; /* Text color */
+    font-weight: bold; /* Make text bold */
+}
+
+
+/* Navigation Styling */
+nav {
+    flex-grow: 1; /* Allow nav to take available space */
+    text-align: right; /* Align nav links to the right */
+}
+
+.nav-list {
+    list-style-type: none; /* Remove bullet points */
+}
+
+.nav-list li {
+    display: inline; /* Display list items inline */
+    margin-left: 50px; /* Space between menu items */
+}
+
+.nav-list a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* White text color */
+    font-size: 1.1em; /* Slightly larger font size */
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.nav-list a:hover {
+    color: black; /* Lighten color on hover */
+}
+
+
+
+
+button {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: lightblue;
+    color: black;
+}
+
+/* Basic styling for the pop-up */
+.popup {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Darker background for emphasis */
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease-in-out; /* Fade-in animation */
+  }
+  
+  /* Pop-up content styling */
+  .popup-content {
+    background-color: #fff;
+    padding: 30px; /* More generous padding for better spacing */
+    border-radius: 15px; /* Softer corners */
+    width: 450px; /* Slightly larger width */
+    height: auto; /* Allow the height to adjust based on content */
+    text-align: left; /* Align text to the left for a cleaner look */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More defined shadow for depth */
+    position: relative;
+    transform: translateY(-20px);
+    animation: slideIn 0.4s ease-out forwards; /* Slide-in animation */
+    font-family: 'Arial', sans-serif; /* Clean, modern font */
+  }
+  
+  /* Close button styling */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #ff4b5c; /* Change to a vibrant color on hover */
+  }
+  
+  /* Input fields styling */
+  form input[type="text"],
+  form input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease; /* Smooth transition */
+  }
+  
+  form input[type="text"]:focus,
+  form input[type="email"]:focus {
+    border-color: #d8353c; /* Highlight input on focus */
+    outline: none;
+  }
+  
+  /* Submit button styling */
+  form input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #d8353c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+  }
+  
+  form input[type="submit"]:hover {
+    background-color: #d8353c; /* Darken on hover */
+  }
+  
+  /* Keyframes for animations */
+  @keyframes fadeIn {
+    from {
+      background-color: rgba(0, 0, 0, 0);
+    }
+    to {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  #homepage {
+    background-color: rgba(249, 249, 249, 0.8); /* Light gray with 80% opacity */
+    padding: 40px;
+    border-radius: 15px; /* Rounded corners for the section */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    margin: 20px; /* Margin around the section */
+    padding: 20px;
+    text-align: center;
+   
+}#services {
+    background-color: rgba(249, 249, 249, 0.8); /* Light gray with 80% opacity */
+    padding: 40px;
+    border-radius: 15px; /* Rounded corners for the section */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    margin: 20px; /* Margin around the section */
+    padding: 20px;
+    text-align: center;
+}#aboutus {
+    background-color: rgba(249, 249, 249, 0.8); /* Light gray with 80% opacity */
+    padding: 40px;
+    border-radius: 15px; /* Rounded corners for the section */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    margin: 20px; /* Margin around the section */
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em; /* Larger font size for the title */
+    color: #2c3e50; /* Darker color for the title */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+p {
+    font-size: 1.2em; /* Increased font size for better readability */
+    color: #34495e; /* Dark gray color for the paragraph */
+    line-height: 1.6; /* Improved line height for readability */
+    max-width: 800px; /* Limit width of text */
+    margin: 0 auto; /* Center the paragraph */
+}
+
+img {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for the image */
+    margin: 20px 0; /* Space above and below the image */
+}
+.service-box {
+    background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+    border: 1px solid #dcdcdc; /* Light gray border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the box */
+    margin: 20px auto; /* Centering the box with auto margins */
+    width: 80%; /* Width set to 80% of the parent container */
+    max-width: 600px; /* Max width to maintain a clean look */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Deeper shadow for more depth */
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for hover effects */
+}
+
+.service-box:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.service-header {
+    display: flex; /* Flexbox for aligning icon and title */
+    align-items: center; /* Center vertically */
+    margin-bottom: 15px; /* Space below the header */
+}
+
+.service-icon {
+    width: 40px; /* Set width for the icon */
+    height: 40px; /* Set height for the icon */
+    margin-right: 10px; /* Space between icon and title */
+}
+
+.service-title {
+    font-size: 50em; /* Larger font size for the title */
+    color: #2c3e50; /* Dark color for the title */
+    margin: 0; /* No margin for the title */
+    font-weight: bold;
+}
+
+.service-box p {
+    font-size: 1.1em; /* Font size for content paragraphs */
+    color: #34495e; /* Darker color for text */
+    line-height: 1.6; /* Line height for better readability */
+}
+.about-text {
+    font-size: 1.2em; /* Font size */
+    color: #34495e; /* Text color */
+    line-height: 1.6; /* Line height for spacing */
+    text-indent: 30px; /* Indentation for the first line */
+    margin: 0; /* Remove default margin */
+    
+}
+
+
+
+/* Styles specific to the About section */
+.about-section {
+    background-color: rgba(249, 249, 249, 0.8); /* Light gray with 80% opacity */
+    padding: 40px; /* Padding around the section */
+    border-radius: 15px; /* Rounded corners for the section */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    margin: 20px; /* Margin around the section */
+    text-align: center; /* Center text alignment */
+}
+
+.about-image {
+    width: 80%; /* Set to a percentage of the parent container */
+    max-width: 600px; /* Maximum width for larger screens */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    margin: 20px 0; /* Space above and below the image */
+}
+
+
+.about-text {
+    font-size: 1.2em; /* Font size for better readability */
+    color: #34495e; /* Darker color for the text */
+    line-height: 1.6; /* Improved line height for readability */
+    max-width: 800px; /* Limit width of text */
+    margin: 0 auto; /* Center the paragraph */
+    text-indent: 30px; /* Indentation for the first line */
+}
+
+/* Style for the h2 headings within the about section */
+.about-section h2 {
+    color: #2c3e50; /* Darker color for section headings */
+    font-size: 2em; /* Size for the section headings */
+    margin-top: 20px; /* Space above the section heading */
+}
+
+/* List styling for key areas of focus */
+.about-section ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    text-align: left; /* Align text to the left */
+    max-width: 800px; /* Limit width of list */
+    margin: 20px auto; /* Center the list */
+}
+
+.about-section ul li {
+    background-color: rgba(255, 255, 255, 0.9); /* White background for list items */
+    border-radius: 8px; /* Rounded corners for list items */
+    padding: 10px; /* Padding inside the list item */
+    margin: 10px 0; /* Space between list items */
+}
